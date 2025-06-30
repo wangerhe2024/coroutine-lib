@@ -31,8 +31,10 @@ public:
 
   // V操作
   void signal() {
-    std::unique_lock<std::mutex> lock(mtx);
-    count++;
+    {
+      std::unique_lock<std::mutex> lock(mtx);
+      count++;
+    }
     cv.notify_one(); // signal
   }
 };
