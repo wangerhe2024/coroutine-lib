@@ -7,7 +7,7 @@
 #include <functional>
 #include <mutex>
 
-namespace sylar {
+namespace ww_coroutine {
 
 // 用于线程方法间的同步
 class Semaphore {
@@ -76,6 +76,6 @@ private:
   Semaphore m_semaphore;
 };
 
-} // namespace sylar
+} // namespace ww_coroutine
 
 // #endif

@@ -4,7 +4,7 @@
 #include <sys/syscall.h>
 #include <unistd.h>
 
-namespace sylar {
+namespace ww_coroutine {
 
 // 线程信息
 static thread_local Thread *t_thread = nullptr;
@@ -71,4 +71,4 @@ void *Thread::run(void *arg) {
   return 0;
 }
 
-} // namespace sylar
+} // namespace ww_coroutine
